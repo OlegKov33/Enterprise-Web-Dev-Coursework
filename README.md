@@ -26,7 +26,7 @@ Pre-requisite
 > If you are installing packages manually, ensure that you are in the same directory as the file in (1.). Navigate between directories with __cd ..__ and __cd _directoryName___
 
 ### Running Code
-1. When inside the directory .... __cd _cm4025-coursework-OlegKov33___
+1. When inside the directory .... __cd _Enterprise-Web-Dev-Coursework___
 2. Type **node _server.js_** You should see: "Your website is ready: http://localhost:8080"
 3. Alternatively run [run_server.bat](/run_server.bat) by double clicking.
 > [!WARNING]  
