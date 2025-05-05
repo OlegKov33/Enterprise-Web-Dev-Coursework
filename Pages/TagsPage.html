@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../MediaAndStyle/Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/post-creation">Make a story</a>
+        <a href="/story-ranking">Story Ranking</a>
+        <a href="/author-ranking">Author Ranking</a>
+        <a href="/reader-ranking">Active Readers</a>
+        <a href="/tags"> Tags</a>
+    </nav>
+
+    
+    <form action="/searchStories" method="post" id="tagsSearch">
+        <div id="tags">
+            <label for="genre-select">Select genres you want to search for:</label>
+            <label><input type="checkbox" name="Tags" value="Fantasy & Mythology">Fantasy & Mythology</label><br>
+            <label><input type="checkbox" name="Tags" value="Science Fiction & Futurism">Science Fiction & Futurism</label><br>
+            <label><input type="checkbox" name="Tags" value="Horror & Thriller">Horror & Thriller</label><br>
+            <label><input type="checkbox" name="Tags" value="Mystery & Crime">Mystery & Crime</label><br>
+            <label><input type="checkbox" name="Tags" value="Romance & Relationships">Romance & Relationships</label><br>
+            <label><input type="checkbox" name="Tags" value="Drama & Slice of Life">Drama & Slice of Life</label><br>
+            <label><input type="checkbox" name="Tags" value="Humor & Satire">Humor & Satire</label><br>
+            <label><input type="checkbox" name="Tags" value="Historical & Alternate History">Historical & Alternate History</label><br>
+            <label><input type="checkbox" name="Tags" value="Experimental & Abstract">Experimental & Abstract</label><br>
+        </div>
+        <label><input type="checkbox" name="Seen" value="Seen">Wish to hide stories that you read?</label><br>
+        <label><input type="checkbox" name="Public" value="False">Wish to hide public stories?</label><br>
+        <!--ADD OPTION FOR SEEN POSTS-->
+        <button type="submit">Search for Stories</button>
+    </form>
+</body>
+<script>
+    document.getElementById('tagsSearch').addEventListener('submit', function(e) {
+        // Find all the checked checkboxes within the labels
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+        // If no checkboxes are checked, alert the user and prevent form submission
+        if (checkboxes.length === 0) {
+            alert('Please select at least one tag.');
+          e.preventDefault(); // Prevent form submission
+        }
+        if (checkboxes.length > 5) {
+            alert('Please select at most five tags.');
+          e.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
+</html>
